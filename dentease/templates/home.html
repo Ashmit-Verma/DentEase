@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		svg{
+			margin-right: 10px;
+		}
+	</style>
+	<script>
+		window.onload = () => {
+			var websiteadd = window.location.href;
+			let result = websiteadd.includes("/contact/");
+			if(result){
+				document.getElementById('contact').click();
+			}
+		};
+	</script>
+	<title>DentalEase</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light justify-content-start" style="padding: 0 5vw; box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08); background-color: #FFFFFF !important">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		<a class="navbar-brand" href="#" style="color: #416EA8;">
+			<b style="letter-spacing: 1px; font-weight: 600;">
+
+				DentalEase
+			</b>   
+		</a>
+	   
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="nav-item">
+				<a href="#Home" class="button">Home</a>
+			</li>
+			<li class="nav-item">
+				<a href="#CVBlogs" class="button">Dental Blogs</a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'contact' %}" class="button" id="contact">Contact Us</a>
+			</li>
+		   
+		   
+		   
+		  </ul>
+		 
+		</div>
+	   
+	  </nav>
+
+
+
+<style>
+.nav-item{
+	padding: 2.5px 3px !important;
+}
+</style>
+
+<section  class="flex justify-content-center">
+	<div style="padding-left:5vw; padding-right:5vw;">
+
+
+	<br>
+	
+	
+		<div>
+			<div class="col-12 col-lg-6 col-md-5" style="padding-bottom:5vw; padding-top:5vw; font-family: GT Walsheim Pro;">
+				<div>
+					
+				<p> 
+					<img src="{% static 'image/Coloured.png' %}" style="margin-left:9vw;" alt="DentalEase">
+				<br>
+				<a href="#dentist">
+				<button style="margin-left:40vw;border-radius: 1.5vw;" class="col col-lg-5 col-md-5 b" ><p class="but"><b>I'M A DENTIST</button>
+				</a>
+				</p></b>	
+				<br>
+				<br>
+				<br>
+				<a href="#patient">
+				<button style="margin-left:40vw; border-radius: 1.5vw;" class="col col-lg-5 col-md-5 b"><p class="but"><b>I'M A PATIENT</button>
+				</a>
+			</b></p>
+			</div>
+		</div>
+	
+	         <div class="col-12 col-lg-6 col-md-6  flex text-right">
+	         	
+
+     
+
+
+             </div>
+        </div>
+    
+  </div>
+</section>
+
+
+
+	   
+	 
+	   
+	   </div>
+	   </div>
+	   
+			 
+		 </div>
+	
+	<br><br>
+	<br>
+	
+	
+
+</section>
+
+<section  class="flex justify-content-center" id="CVBlogs">
+ 	<br>
+	<br>
+	
+	<br>
+	<br>
+ 
+  
+
+
+
+
+
+    
+
+ <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  
+</body>
+
+

@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Medium"), local("GT-Walsheim-Pro-Medium"),
+    url("../font/GTWalsheimPro-Medium.woff2") format("woff2"),
+    url("../font/GTWalsheimPro-Medium.woff") format("woff"),
+    url("../font/GTWalsheimPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+.navbar-toggle {
+  background-color: transparent;
+  border: 1px solid grey !important;
+  border-radius: 4px;
+}
+
+.icon-bar {
+  background-color: grey;
+  height: 1px;
+}
+.button {
+  color: black !important;
+  border: none;
+  background-color: white;
+  border-radius: 8px;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: GT Walsheim Pro;
+}
+.button:hover {
+  background-color: #416ea8 !important;
+  color: white !important;
+}
+
+.b {
+  background: #416ea8;
+  border-radius: 6.66307px;
+  border-width: 0px;
+  height: 6vh;
+  width: 80vw;
+}
+
+.but {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+.i {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+#h {
+  color: white;
+}
+.text {
+  font-family: GT Walsheim Pro;
+  font-size: 15px;
+}
+
+.c {
+  background: #416ea8;
+  border-radius: 8px;
+}
+
+.card {
+  border: none !important;
+  box-shadow: none !important;
+}
+.card-body {
+  color: white;
+  background: #416ea8 !important;
+}
+.cardtext {
+  color: white;
+}
+
+#more-tests {
+  display: none;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.same-height {
+  height: 100% !important;
+}
+#dent {
+  margin-left: 10vw;
+}

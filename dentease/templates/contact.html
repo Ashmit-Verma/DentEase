@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 20px;
+        background-image: url("{% static 'image/background.svg' %}");
+        z-index: 50;
+        background-size: contain;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .header {
+        color: #01579b;
+        text-align: center;
+        font-family: Roboto;
+      }
+
+      .form-container {
+        padding: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      .message {
+        height: 150px;
+      }
+
+      .submit-button {
+        display: block;
+        background-color: #01579b;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        background-color: #555;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+          padding: 8px;
+        }
+
+        .message {
+          height: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-edit navbar-expand-lg navbar-light bg-light"
+      style="
+        padding: 1vh 8vw;
+        box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08);
+        background-color: #ffffff !important;
+      "
+    >
+      <a class="brand" href="{% url 'home' %}" id="brand">DentalEase</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse drop-menu" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="menu-item">
+            <a
+              href="{% url 'home' %}"
+              class="nav-menu"
+              style="margin-right: 8vw"
+              >Home</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="{% url 'contact' %}" class="nav-menu activa">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="header">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="form-container">
+        <form method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">Name:</label>
+            {{ form.name }}
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="{{ form.phone.id_for_label }}">Phone:</label>
+            {{ form.phone }}
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="{{ form.locality.id_for_label }}">Locality:</label>
+            {{ form.locality }}
+            <input type="text" id="locality" name="locality" required />
+          </div>
+          <div class="form-group">
+            <label for="{{ form.message.id_for_label }}">Message:</label>
+            {{ form.message }}
+            <textarea
+              id="message"
+              name="message"
+              class="message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
