@@ -19,6 +19,5 @@ from django.urls import path,include
 
 urlpatterns = [
    path("", include("dentease.urls")),
-  
     path('admin/', admin.site.urls),
 ]

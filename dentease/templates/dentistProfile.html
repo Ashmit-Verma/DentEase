@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dentist Page</title>
+    <style>
+      body {
+        background-image: url("bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .navbar {
+        width: 100%;
+        color: rgba(0, 0, 0, 0.87);
+        font-family: Roboto;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        overflow: auto;
+      }
+
+      .navbar a {
+        float: left;
+        padding: 20px;
+        /* padding-top: 60px; */
+        color: rgb(6, 0, 0);
+        text-decoration: none;
+        font-size: 22px;
+      }
+
+      .navbar a:hover {
+        color: #01579b;
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .active {
+        color: #01579b;
+        font-family: Roboto;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .w3rcontainer {
+        border: 1px solid #cccfdb;
+        border-radius: 2px;
+      }
+      .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+        color: #0087ca;
+      }
+
+      .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #0087ca;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      .table {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-bottom: 10vh;
+      }
+
+      .table td {
+        text-align: center;
+        height: 15vh;
+      }
+
+      .hidden-header {
+        visibility: hidden;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .header-row th {
+        background-color: #ffffff;
+        font-weight: bold;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tbody tr {
+        border: 1px solid white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        /* Shadow effect */
+      }
+
+      td {
+        padding: 8px;
+      }
+
+      .reconsult-button {
+        width: 10vw;
+        height: 5vh;
+        background-color: #03a9f4;
+        border-radius: 5vh;
+        border-color: white;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2vw;
+      }
+
+      .doctor-image {
+        max-height: 15vh;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="navbar">
+      <span
+        ><a
+          ><img src="logo.png" alt="dentalease logo" width=220 height=80"
+          style="display:inline-block" ></a
+        ></span
+      >
+      <a><pre></pre></a>
+      <a class="active hover-underline-animation" href="#about">About</a>
+      <a class="active hover-underline-animation" href="#facilities"
+        >Facilities</a
+      >
+      <a class="active hover-underline-animation" href="#consult">Consult</a>
+      <a class="active hover-underline-animation" href="#clinics">Clinics</a>
+      <a class="active hover-underline-animation" href="#contact">Contact Us</a>
+    </span>
+    <br /><br /><br />
+    <br /><br /><br />
+    <h1>Good morning, Dr. Sushant Kapoor</h1>
+
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th class="hidden-header">Image</th>
+            <th>Patient Name</th>
+            <th>Last Checkup On</th>
+            <th>Current Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Add table rows (data) here -->
+          <tr>
+            <td>
+              <img
+                class="doctor-image"
+                src="images/doctor1.svg"
+                alt="Doctor 1"
+              />
+            </td>
+            <td>Rishi Bhugalya</td>
+            <td>2023-10-10</td>
+            <td>Healthy</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="doctor-image"
+                src="images/doctor2.svg"
+                alt="Doctor 2"
+              />
+            </td>
+            <td>Kushagra Kaur</td>
+            <td>2023-09-25</td>
+            <td>Healthy</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="doctor-image"
+                src="images/doctor3.svg"
+                alt="Doctor 3"
+              />
+            </td>
+            <td>Nitesh Sharma</td>
+            <td>2023-09-25</td>
+            <td>Not Healthy</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="doctor-image"
+                src="images/doctor4.svg"
+                alt="Doctor 4"
+              />
+            </td>
+            <td>Rajesh Sai</td>
+            <td>2023-09-25</td>
+            <td>Healthy</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

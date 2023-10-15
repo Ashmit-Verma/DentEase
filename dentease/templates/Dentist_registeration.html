@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %} {% load widget_tweaks %}
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/dentistRegistrations.css' %}"
+    />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <title>Dentist Registration</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-edit navbar-expand-lg navbar-light bg-light"
+      style="
+        padding: 1vh 8vw;
+        box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08);
+        background-color: #ffffff !important;
+      "
+    >
+      <a
+        class="brand"
+        href="{% url 'home' %}"
+        style="text-decoration: none"
+        id="brand"
+        >DentalEase</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse drop-menu" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="menu-item">
+            <a
+              href="{% url 'home' %}"
+              class="nav-menu"
+              style="margin-right: 8vw"
+              >Home</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="{% url 'contact' %}" style="margin: auto" class="nav-menu"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="{% url 'dentistLogin' %}" role="button"
+          >Login</a
+        >
+      </div>
+    </nav>
+    <div class="head">DENTIST REGISTERATION</div>
+    <form method="post" action="#">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="{{ form.full_name.id_for_label }}">Name:</label>
+        {{ forms.full_name }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.email.id_for_label }}">Email:</label>
+        {{ forms.email }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.registration_number.id_for_label }}"
+          >registration_number</label
+        >
+        {{ forms.registration_number }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.contact.id_for_label }}">Phone:</label>
+        {{ forms.contact }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.clinic_address.id_for_label }}"
+          >Clinic Address</label
+        >
+        {{ forms.clinic_address }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.password1.id_for_label }}">Password </label>
+        {{ forms.password1 }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+        {{ forms.password2 }}
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block regn">
+          Register
+        </button>
+      </div>
+      <br />
+    </form>
+    <div class="student">
+      <a class="intern" href="#"> I am a Student</a>
+    </div>
+    <br /><br />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
